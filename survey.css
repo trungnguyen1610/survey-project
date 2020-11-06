@@ -1,0 +1,110 @@
+body {
+  font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+}
+/* form start */
+#formInput {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+  letter-spacing: 0.01em;
+}
+/* form end */
+.header {
+  margin: 0 0 5px 0;
+  padding: 0 1% 1.1em 1%;
+  border-bottom: 1px dotted #ccc;
+}
+.header h2 {
+  font-size: 2.1rem;
+  margin: 5px 0 ;
+}
+.header div {
+  font-size: 1.2rem;
+  line-height: 135%;
+  color: #555;
+}
+.tableForm {
+    border: 1px solid #dedede;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+thead{
+    background-color: #e6e6e6;
+}
+tbody tr:nth-child(2){
+    background-color: #f5f5f5;
+}
+.tableForm th {
+  font-weight: bold;
+  font-size: 120%;
+  border-bottom: 1px solid #dedede;
+}
+.tableForm th,
+td {
+    border-bottom: 1px solid #dedede;
+  padding: 20px;
+  text-align: center;
+  border-left: 1px solid #ccc;
+}
+.tableForm input{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+.tableForm label{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+select{
+    width: 50%;
+}
+form li{
+    padding: 6px 1% 9px 1%;
+    margin: 0;
+}
+label.desc, legend.desc {
+    font-size: 95%;
+    font-weight: bold;
+    color: #222;
+    line-height: 150%;
+    margin: 0;
+    padding: 0 0 3px 0;
+    border: none;
+    display: block;
+    white-space: normal;
+    width: 100%;
+}
+/* sub class */
+.block {
+  display: flex;
+  align-items: center;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+.text-left{
+    text-align: left !important;}
+.ml-25{
+    margin-left: 25px;
+}
+.m-5{
+    margin:5px;
+}
+.caption{
+    text-align: left;
+    color: #222;
+    font-size: 95%;
+    line-height: 135%;
+    padding: 5px 0 .5em 0;
+}
+#warning{
+    display: none;
+}

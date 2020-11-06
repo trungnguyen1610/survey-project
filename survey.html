@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="survey.css">
+</head>
+
+<body>
+    <form action="/page_content" id="formInput" method="get">
+        <header id="header" class="header">
+            <h2>Market Research Survey</h2>
+            <div>Please take a few moments to complete this satisfaction survey.</div>
+        </header>
+        <ul>
+            <li>
+                <label class="block desc">
+                    What is your age range?
+                </label>
+                <select name="" id="">
+                    <option value="">18-24</option>
+                    <option value="">25-34</option>
+                    <option value="">35-50</option>
+                    <option value="">50+</option>
+
+                </select>
+
+            </li>
+            <li>
+                <label class="block desc">
+                    What is your yearly income range?
+                </label>
+                <select name="" id="">
+                    <option value="">
+                        $0 - $25,000
+                    </option>
+                    <option value="">
+                        $25,001 - $50,000
+                    </option>
+                    <option value="">
+                        $50,001 - $100,000
+                    </option>
+                    <option value="">
+                        $100,000+
+                    </option>
+
+                </select>
+            </li>
+            <li>
+
+                <fieldset>
+                    <legend class="desc">Gender Identity</legend>
+                    <div id="gender_selected" onclick="checkBox()">
+                        <div class="block mb-05">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="block mb-05">
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="block mb-05">
+                            <input type="radio" id="nonbinary" name="gender" value="nonbinary">
+                            <label for="nonbinary">Nonbinary</label>
+                        </div>
+                        <div class="block mb-05">
+                            <input id="other" type="radio" name="gender" value="other" >
+                            <label for="other">Other</label>
+                            
+                        </div>
+                       
+                        <input class="other" for="other" style="margin-left: 25px" type="text" onclick="inputSel()">
+                        <div id="warning" class="ml-25">Maximum of 250 characters.</div>
+                    </form>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <legend class="desc">
+                        Which of the following products have your purchased in the last 2 months. Please check all that
+                        apply.
+                    </legend>
+                    <div>
+                        <span class="block mb-05">
+                            <input type="checkbox" id="product1" name="product1" value="">
+                            <label for="product1"> Product 1</label>
+                        </span>
+                        <span class="block mb-05">
+                            <input type="checkbox" id="product2" name="product2" value="">
+                            <label for="product2">Product 2</label>
+                        </span>
+                        <span class="block mb-05">
+                            <input type="checkbox" id="product3" name="product3" value="">
+                            <label for="product3"> Product 3</label>
+                        </span>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <legend class="desc">
+                        How often would you use our new product?
+                    </legend>
+                    <div>
+                        <span class="block mb-05">
+                            <input type="radio" id="daily" name="weeks" value="">
+                            <label for="daily"> Daily</label>
+                        </span>
+                        <span class="block mb-05">
+                            <input type="radio" id="weekly" name="weeks" value="">
+                            <label for="weekly">Weekly</label>
+                        </span>
+                        <span class="block mb-05">
+                            <input type="radio" id="monthly" name="weeks" value="">
+                            <label for="monthly">Monthly</label>
+                        </span>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <legend class="desc">
+                        What would you pay for the new product?
+                    </legend>
+                    <div class="row">
+                        <div>$</div>
+                        <div>
+                            <input class=" mb-05" type="text" id="dollar" name="dollar"><br>
+                            <label class="m-5" for="dollar">Dollars</label>
+                        </div>
+                        <div>.</div>
+                        <div>
+                            <input style="width: 20%;max-width: 100%;" class=" mb-05" type="text" id="cent"
+                                name="cent"><br>
+                            <label class="m-5" for="cent">Cent</label>
+                        </div>
+                    </div>
+                </fieldset>
+            </li>
+            <li>
+                <fieldset>
+                    <legend class="desc" for="message">What features would you like to see in the new product.
+                    </legend>
+                    <textarea id="message" name="message" rows="10"  ></textarea>
+                </fieldset>
+            </li>
+            <li style="overflow-x: auto;">
+                <table class="tableForm">
+                    <caption class="caption">Please rate your level of agreement with the following statements.</caption>
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">&nbsp;</th>
+                            <th style="width: 15%;">Strongly Disagree </th>
+                            <th style="width: 15%;">Disagree</th>
+                            <th style="width: 15%;">Agree </th>
+                            <th style="width: 15%;">Strongly Agree</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="text-left">Our products are priced fairly. </th>
+                            <td>
+                                <input type="radio" name="number" id="one" value="1">
+                                <label for="one">1</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="two" value="2">
+                                <label for="two">2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="three" value="3">
+                                <label for="three">3</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="four" value="4">
+                                <label for="four">4</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="text-left">Our products are high quality. </th>
+                            <td>
+                                <input type="radio" name="number" id="one" value="1">
+                                <label for="one">1</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="two" value="2">
+                                <label for="two">2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="three" value="3">
+                                <label for="three">3</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="four" value="4">
+                                <label for="four">4</label>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="text-left">You would recommend our product to a friend or coworker. </th>
+                            <td>
+                                <input type="radio" name="number" id="one" value="1">
+                                <label for="one">1</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="two" value="2">
+                                <label for="two">2</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="three" value="3">
+                                <label for="three">3</label>
+                            </td>
+                            <td>
+                                <input type="radio" name="number" id="four" value="4">
+                                <label for="four">4</label>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </li>
+            <li>
+                <input type="submit" value="Submit">
+            </li>
+        </ul>
+    </form>
+    <script src="./survey.js"></script>
+</body>
+
+</html>
